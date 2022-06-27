@@ -1,0 +1,7 @@
+name: iQual Color Selector
+type: module
+description: Module that provides color selection for product
+package: Custom
+core_version_requirement: ^8 || ^9
+dependencies:
+  - color_field:color_field
