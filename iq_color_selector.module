@@ -8,3 +8,25 @@
  * This file is no longer required in Drupal 8.
  * @see https://www.drupal.org/node/2217931
  */
+
+/**
+ * Implements hook_theme().
+ */
+function iq_color_selector_theme() {
+  return [
+    'color_field_formatter_swatch_option_gradient' => [
+      'variables' => [
+        'id' => NULL,
+        'name' => NULL,
+        'input_type' => NULL,
+        'value' => NULL,
+        'shape' => NULL,
+        'color' => NULL,
+        'width' => NULL,
+        'height' => NULL,
+        'attributes' => NULL,
+        'hexes' => NULL,
+      ],
+    ],
+  ];
+}

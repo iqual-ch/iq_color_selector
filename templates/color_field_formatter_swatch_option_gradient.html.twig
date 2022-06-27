@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Radio/checkbox button theme implementation of a color swatch formatter.
+ *
+ * Available variables:
+ * - id: The option id.
+ * - name: The option name.
+ * - input_type: The input type; radio or checkbox.
+ * - value: The color value.
+ * - color: The color background.
+ * - width: The width of the color swatch.
+ * - height: The height of the color swatch.
+ * - shape: The shape of the color swatch.
+ *
+ * @see template_preprocess()
+ * @see template_preprocess_color_field_formatter_swatch()
+ *
+ * @ingroup themeable
+ */
+#}
+{{ attach_library('color_field/color-field-formatter-swatch-options') }}
+<span title="{{ label }}" class="color_field__swatch--{{ shape }}" style="{% if hexes|length == 1 %}background: {{ hexes.0 }}{% endif %}{% if hexes|length == 2 %}background: linear-gradient(90deg, {{ hexes.0 }} 50%, {{ hexes.1 }} 50%){% endif %}"></span>
