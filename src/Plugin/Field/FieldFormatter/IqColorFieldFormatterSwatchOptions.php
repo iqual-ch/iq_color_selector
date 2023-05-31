@@ -44,7 +44,7 @@ class IqColorFieldFormatterSwatchOptions extends ColorFieldFormatterSwatch {
       '#theme' => 'color_field_formatter_swatch_option_gradient',
       '#id' => $id,
       '#name' => $name,
-      '#label' => $items->getEntity()->name->value,
+      '#label' => $items->getEntity()->name->value ?? '',
       '#input_type' => $this->fieldDefinition->getFieldStorageDefinition()->isMultiple() ? 'checkbox' : 'radio',
       '#value' => $hex,
       '#shape' => $settings['shape'],
