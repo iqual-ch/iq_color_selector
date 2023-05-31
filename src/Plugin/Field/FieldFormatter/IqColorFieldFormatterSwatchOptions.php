@@ -26,7 +26,7 @@ class IqColorFieldFormatterSwatchOptions extends ColorFieldFormatterSwatch {
   /**
    * {@inheritdoc}
    */
-  public function viewElements(FieldItemListInterface $items, $langcode) {
+  public function viewElements(FieldItemListInterface $items, $langcode): array {
     $item = NULL;
     $settings = $this->getSettings();
 
