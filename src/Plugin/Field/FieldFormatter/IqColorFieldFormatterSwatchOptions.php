@@ -26,7 +26,8 @@ class IqColorFieldFormatterSwatchOptions extends ColorFieldFormatterSwatch {
   /**
    * {@inheritdoc}
    */
-  public function viewElements(FieldItemListInterface $items, $langcode) {
+  public function viewElements(FieldItemListInterface $items, $langcode): array {
+    $item = NULL;
     $settings = $this->getSettings();
 
     $elements = [];
@@ -34,7 +35,7 @@ class IqColorFieldFormatterSwatchOptions extends ColorFieldFormatterSwatch {
     $hexes = [];
 
     $name = Html::getUniqueId("color-field");
-    foreach ($items as $delta => $item) {
+    foreach ($items as $item) {
       $hexes[] = $hex = $this->viewRawValue($item);
       $id = Html::getUniqueId("color-field-$hex");
     }
@@ -43,7 +44,7 @@ class IqColorFieldFormatterSwatchOptions extends ColorFieldFormatterSwatch {
       '#theme' => 'color_field_formatter_swatch_option_gradient',
       '#id' => $id,
       '#name' => $name,
-      '#label' => $items->getEntity()->name->value,
+      '#label' => $items->getEntity()->name->value ?? '',
       '#input_type' => $this->fieldDefinition->getFieldStorageDefinition()->isMultiple() ? 'checkbox' : 'radio',
       '#value' => $hex,
       '#shape' => $settings['shape'],
