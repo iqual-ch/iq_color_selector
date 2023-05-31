@@ -9,6 +9,7 @@
     }
   ],
   "require": {
-    "drupal/color_field": "^3.0"
+    "drupal/color_field": "^3.0",
+    "php": "^8.0"
   }
 }
