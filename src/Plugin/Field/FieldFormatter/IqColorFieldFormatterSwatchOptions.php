@@ -35,7 +35,7 @@ class IqColorFieldFormatterSwatchOptions extends ColorFieldFormatterSwatch {
     $hexes = [];
 
     $name = Html::getUniqueId("color-field");
-    foreach ($items as $delta => $item) {
+    foreach ($items as $item) {
       $hexes[] = $hex = $this->viewRawValue($item);
       $id = Html::getUniqueId("color-field-$hex");
     }
