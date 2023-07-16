@@ -2,12 +2,12 @@
 
 namespace Drupal\iq_color_selector\Plugin\Field\FieldFormatter;
 
+use Drupal\color_field\ColorHex;
+use Drupal\color_field\Plugin\Field\FieldFormatter\ColorFieldFormatterSwatch;
 use Drupal\color_field\Plugin\Field\FieldType\ColorFieldType;
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Field\FieldItemListInterface;
-use Drupal\color_field\ColorHex;
 use Drupal\Core\Template\Attribute;
-use Drupal\color_field\Plugin\Field\FieldFormatter\ColorFieldFormatterSwatch;
 
 /**
  * Plugin implementation of the color_field swatch formatter.
